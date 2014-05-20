@@ -1,4 +1,4 @@
-<div ng-controller="MainCtrl">
+<div ng-controller="JerkMainCtrl">
 
 <div class="header">
   <ul class="nav nav-pills pull-right">
@@ -12,8 +12,16 @@
   <p class="lead">
     <img src="images/jerkstore.png" class="jerkstore" alt="I'm JerkStore"><br>
   </p>
-  <p><a class="btn btn-sm btn-success" ng-href="#">Shop Now!<span class="glyphicon glyphicon-ok"></span></a></p>
 </div>
 
-</div>
-</div>
+<h1>Jerk Stock</h1>
+<div class="row col-md-6" ng-repeat="jerks in jerkFaces">
+    <ul>
+      <li><h3>{{jerks.name}}</h3></li>
+      <li><img ng-src="{{jerks.thumb}}"></img></li>
+      <li><h4>{{jerks.preview}}</h4></li>
+      <button class="btn btn-primary btn-default" data-toggle="modal" data-target="#myModal" data='{{jerkFace.id}}'>Detailed Jerk Info <span class="glyphicon glyphicon-zoom-in"></span></button>
+      <li><a class="btn btn-default btn-success" ng-href="#">Add Jerk To Cart <span class="glyphicon glyphicon-shopping-cart"></span></a></p></li>
+      
+    </ul>
+  </div>
